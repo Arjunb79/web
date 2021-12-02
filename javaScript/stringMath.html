@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING & MATH</title>
+</head>
+<body> <h1 style="text-align: center;">String Operations</h1>
+    <div></div>
+    <table align="center" cellpadding="16" cellspacing="4" border="1">
+        <tbody>
+            
+        <tr>
+            <th style="color: brown; font-variant-alternates: annotation();"> enter the text:</th>
+            <td><input type="text" id="s"></td>
+        </tr>
+        <tr>
+            <th>enter start</th>
+            <td><input type="text" id="n1"></td>
+        </tr>
+        <tr>
+            <th>enter end</th>
+            <td><input type="text" id="n2"></td>
+        </tr>
+        <tr style="border-bottom: 2px;">
+            <th>sliced text</th>
+            <td><input type="text" name="slice" id="slice">
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input type="button" name="check" value="slice" onclick="slice()">
+            </th>   
+        </tr>
+       
+    </tbody>      
+</table>
+
+
+
+
+        
+<table align="center" cellpadding="16" cellspacing="4" border="1">
+    <tbody>
+
+
+        <tr>
+            <th>sub string:</th>
+            <td><input type="text" name="substring" id="subs"></td>
+        </tr>
+        <tr>
+            <th>replace:</th>
+            <td><input type="text" name="replace" id="rep"></td>
+        </tr>
+        <tr>
+            <th>length:</th>
+            <td><input type="text" name="length" id="len"></td>
+        </tr>
+        <tr>
+            <th>uppercase</th>
+            <td><input type="text" name="upper" id="upper"></td>
+        </tr>
+        <tr>
+            <th>lowercase</th>
+            <td><input type="text" name="lower" id="lower"></td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input type="button" name="check" value="Generate" onclick="string()">
+            </th>
+            
+        </tr>
+    </tbody>
+        
+</table>
+
+
+</div>
+<div>
+<h1 style="text-align: center;">Math Operations</h1><hr>
+<table align="center" cellpadding="16" cellspacing="4" border="1">
+    <tbody>
+        <tr>
+            <th style="color: brown; font-variant-alternates: annotation();">enter the number:</th>
+            <td><input type="number" name="number" id="num"></td>
+        </tr>
+        <tr>
+            <th>square root:</th>
+            <td><input type="text" name="square" id="res"></td>
+        </tr>
+        <tr>
+            <th>absolute value:</th>
+            <td><input type="text" name="square" id="abs"></td>
+        </tr>
+        <tr>
+            <th>sine of the number:</th>
+            <td><input type="text" name="square" id="sine"></td>
+        </tr>
+        <tr>
+            <th>cosine of the number:</th>
+            <td><input type="text" name="square" id="cosine"></td>
+        </tr>
+        <tr>
+            <th>tan of the number:</th>
+            <td><input type="text" name="square" id="tan"></td>
+        </tr>
+        <tr>
+            <th>cube root:</th>
+            <td><input type="text" name="square" id="cube"></td>
+        </tr>
+        <tr>
+            <th> logarithm of a number:</th>
+            <td><input type="text" name="square" id="log"></td>
+        </tr>
+        <tr>
+            <th> exponential of a number:</th>
+            <td><input type="text" name="square" id="exp"></td>
+        </tr>
+        <tr>
+            <th> closest integer value :</th>
+            <td><input type="text" name="square" id="round"></td>
+        </tr>
+        
+       
+
+
+
+        <tr>
+            <th colspan="2"><input type="button" name="check" value="Generate" onclick="math()"></th>
+        </tr>
+
+    </tbody>
+</table>
+</div>
+</body>
+
+
+<script lang="javascript/text">
+    function math(){
+        let a=document.getElementById('num').value
+       let b=Math.sqrt(a)
+        document.getElementById('res').value=b
+        c=Math.abs(a)
+        document.getElementById('abs').value=c
+        d=Math.sin(a)
+        document.getElementById('sine').value=d
+        e=Math.cbrt(a)
+        document.getElementById('cube').value=e
+        f=Math.log(a)
+        document.getElementById('log').value=f
+        g=Math.exp(a)
+        document.getElementById('exp').value=g
+        h=Math.round(a)
+        document.getElementById('round').value=h
+        i=Math.cos(a)
+        document.getElementById('cosine').value=i
+        j=Math.tan(a)
+        document.getElementById('tan').value=j
+
+        
+
+
+
+
+
+    }
+    function string(){
+        let a=document.getElementById('s').value;
+        
+        let l=a.length
+        document.getElementById('len').value=l
+        u=a.toUpperCase()
+        lo=a.toLowerCase()
+        document.getElementById('upper').value=u
+        document.getElementById('lower').value=lo
+        re=a.replace('a','$')
+        document.getElementById('rep').value=re
+        sub=a.substring(0,4)
+        document.getElementById('subs').value=sub
+}
+function slice(b,d){
+    let a=document.getElementById('s').value;
+    b=document.getElementById('n1').value;
+    d=document.getElementById('n2').value;
+    re=a.slice(b,d)
+    document.getElementById('slice').value=re
+
+}
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doller to Rupees</title>
+
+   
+</head>
+<body>
+   <table align="center" border="1">
+       <form action="" name="f">
+           <tr>
+               <th> 
+                   Doller:
+               </th>
+               <th>
+                   <input type="text" name="doller" id="d">
+               </th>
+           </tr>
+
+           <tr>
+            <th> 
+                Rupees:
+            </th>
+            <th>
+                <input type="text" name="rupees" id="r">
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input type="button" name="convert" value="Convert" onclick="con()">
+            </th>
+        </tr>
+    </form>
+
+   </table> 
+
+</body>
+<script type="text/javascript">
+    function con(){
+        
+        d=document.f.doller.value;
+        r=d*74.31;
+        document.f.rupees.value=r;
+        console.log(r);
+
+    }
+
+</script>
+
+</html>
