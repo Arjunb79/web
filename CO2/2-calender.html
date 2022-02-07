@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+</head>
+<body>
+    <div style="text-align: center;margin-left: 300px;">
+    <table cellpadding="20" cellspacing="10" border="1">
+        <tbody>
+            <tr>
+                <th>enter year:</th>
+                <td><input type="number" id="year" placeholder="year"></td> 
+            </tr>
+            <!-- <tr>
+                <th>enter month</th>
+                <td><input type="number" id="month" placeholder="month"></td>
+            </tr> -->
+            <tr>
+               <th colspan="2"><input type="button" value="generate" onclick="calender()">
+                <input type="reset"  value="reset" onclick="location.reload()" ></th> 
+            </tr>
+        </tbody>
+    </table>
+</div>
+<table>
+    <tbody>
+        <tr><th>
+                <div id="mont0"></div></th>
+                <th> <div id="mont1"></div></th>
+                <th> <div id="mont2"></div></th>
+                <th> <div id="mont3"></div></th>
+             </tr>
+            
+            <tr><th>
+                <div id="mont4"></div></th>
+                <th>  <div id="mont5"></div></th>
+                <th>  <div id="mont6"></div></th>
+                <th>  <div id="mont7"></div></th>
+            </th>  </tr>
+            <tr><th>
+                <div id="mont8"></div></th>
+                <th> <div id="mont9"></div></th>
+                    <th> <div id="mont10"></div></th>
+                        <th>  <div id="mont11"></div></th>
+            </th> </tr>
+            </tbody>
+            </table>
+
+</body>
+
+<script>
+    function generate(elem,year,month){
+        m=['January','february','march','april','may','june','july','augest','september','october','november','december']
+        
+        mon = month
+        var date=new Date(year,mon)
+
+        table='<table border=1>'
+            table+="<tr><th colspan='7' >"+m[mon]+"</th></tr>"
+            table+="<tr><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr><tr>"
+        for(i=0;i<date.getDay();i++){
+            table+='<td></td>'
+        }
+
+        while(date.getMonth()==mon){
+            table+='<td>'+date.getDate()+'</td>'
+            if(date.getDay(date)%7==6){
+                table+='</tr><tr>'
+            }
+            date.setDate(date.getDate()+1)
+        }
+        if(getDay(date)!=0){
+            for(i=getDay(date);i<7;i++){
+                table+='<td></td>'
+            }
+        }
+        table+='</tr></table>'
+        document.getElementById(elem).innerHTML=table    
+    }
+
+    function getDay(date){
+        d=date.getDay()
+        if(d==0)
+        d=7
+        return d
+
+    }
+
+    function calender(){
+        yyyy=document.getElementById('year').value
+        for(mm=0;mm<12;mm++){
+            mont='mont'.concat(mm)
+            generate(mont,yyyy,mm)
+        }
+    }
+</script>
+</html>

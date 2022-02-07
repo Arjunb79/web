@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web lab 5th program</title>
+</head>
+<body>
+    <div style="box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 4em;" 
+    height: calc(100% - 8em);>
+        <h1 id="head1">SACHIN</h1>
+      
+        <img src="sachin.jpg" alt="" id="img1" style="background-repeat: no-repeat;width: 500px;height:500px;">
+    </div>
+
+    <script>
+        document.getElementById('img1').addEventListener("mouseover",change1)
+        document.getElementById('img1').addEventListener("mouseout",change2)
+        function change1(){
+            document.getElementById('img1').src="Rohit-Sharma-2-.jpg"
+            document.getElementById('head1').innerHTML="Rohith Sharma"
+            
+        }
+        function change2(){
+            document.getElementById('img1').src="sachin.jpg"
+            document.getElementById('head1').innerHTML="SACHIN"
+            
+        }
+        
+
+
+    </script>
+</body>
+</html>

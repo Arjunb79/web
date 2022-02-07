@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSE OVER</title>
+</head>
+<body>
+    
+    <div style="box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 4em;padding-right: 200px;
+    height: calc(100% - 8em);">
+    <h1 id="head1">ARJUN B</h1>
+    <h1 id="head2">KASARAGOD</h1>
+        <img src="a.jpg" alt="" id="img" style="height: 500px;width: 500px;">
+        
+  
+    </div>
+
+    <script>
+        document.getElementById('head1').addEventListener("mouseover",change1)
+        document.getElementById('head2').addEventListener("mouseout",change2)
+        function change1(){
+            document.getElementById('img').src="c.jpg"
+            document.getElementById('head1').style.display="none"
+            document.getElementById('head2').style.display="block"
+            
+        }
+        function change2(){
+            document.getElementById('img').src="a.jpg"
+            document.getElementById('head1').style.display="block"
+            document.getElementById('head2').style.display="none"
+            
+        }
+    </script>
+</body>
+</html>

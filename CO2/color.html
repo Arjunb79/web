@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+    <script>
+        document.getElementById("btn").addEventListener("click",colorChange)
+       function colorChange(){
+           color= "#"+Math.floor(Math.random()*12345678).toString(16)
+           document.body.style.background=color
+
+       }
+
+    
+
+    </script>
+</head>
+<body>
+    <div style="margin: 300px; padding-left: 300px;">
+    <form action="">
+       <input type="button" value="click here to change background" style="border-radius: 10px;" id="btn" onclick="colorChange()">
+    </div>
+    </form>
+</body>
+</html>

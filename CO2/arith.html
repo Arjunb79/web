@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+    <table align="center" border="2">
+    <form action="" name="f">
+        
+       <tr>
+           <th colspan="2"> enter first number:</th>
+        <th colspan="2"><input type="text" name="n1"></th>
+    </tr> 
+       <tr> 
+           <th colspan="2"> enter second number:</th>
+        <th colspan="2">
+            <input type="text" name="n2" ></th>
+        </tr>
+        <tr><th colspan="2">Result</th>
+            <th colspan="2">
+                <input type="text" name="result">
+            </th>
+        </tr>
+        <tr>
+            <th><input type="button" name="add" value="add" onclick="addition()"></th>
+            <th><input type="button" name="add" value="sub" onclick="substration()"></th>
+            <th><input type="button" name="add" value="mul" onclick="multiply()"></th>
+            <th><input type="button" name="add" value="div" onclick="division()"></th>
+        </tr>
+      
+</form>
+</table>
+</body>
+
+<script lang="javascript\text">
+function addition(){
+    a=Number(document.f.n1.value);
+    b=Number(document.f.n2.value);
+    c=a+b;
+    document.f.result.value=c;
+}
+function substration(){
+    a=Number(document.f.n1.value);
+    b=Number(document.f.n2.value);
+    c=a-b;
+    document.f.result.value=c;
+}
+function multiply(){
+    a=Number(document.f.n1.value);
+    b=Number(document.f.n2.value);
+    c=a*b;
+    document.f.result.value=c;
+}
+function division(){
+    a=Number(document.f.n1.value);
+    b=Number(document.f.n2.value);
+    c=a/b;
+    document.f.result.value=c;
+}
+
+</script>
+</html>

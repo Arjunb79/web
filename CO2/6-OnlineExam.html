@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online exam</title>
+</head>
+<body>
+    <u><h1 style="padding-left: 550px; ">Online Quiz</h1></u><br>
+    <div style="margin: 0px 300px 00px;">
+    <form action="">
+        <label for="q1" style="font-size: 25px;">Q1.What does HTML stand for?:</label><br><br>
+        <input type="radio" name="q1">Hyper tool markup langinage <br>
+        <input type="radio" name="q1" id="r1">Hyper text markup language<br>
+        <input type="radio" name="q1">Hyperlink and text marup langunage<br><hr><br>
+
+        <label for="q2" style="font-size: 25px;">Q2.Who is making the Web standards?</label><br>
+        <input type="radio" name="q2">google<br>
+        <input type="radio" name="q2" id="r2">World Wide Web Consortium<br>
+        <input type="radio" name="q2">MIcrosoft<br><hr>
+
+        <label for="q2" style="font-size: 25px;">Q3.HTML program is saved using _________ extension.?</label><br>
+        <input type="radio" name="q3" id="r3">.html<br>
+        <input type="radio" name="q3">.hml<br>
+        <input type="radio" name="q3">.htl<br><hr>
+
+        <label for="q2" style="font-size: 25px;">Q4.DOM stands for?</label><br>
+        <input type="radio" name="q4">Data object model<br>
+        <input type="radio" name="q4" id="r4">Document object model<br>
+        <input type="radio" name="q4">Document Oriented model<br><hr>
+        <label for="q2" style="font-size: 25px;">Q5.HTML web pages can be read and rendered by</label><br>
+        <input type="radio" name="q5">.Compiler<br>
+        <input type="radio" name="q5">Server<br>
+        <input type="radio" name="q5" id="r5">Web Browser<br>
+
+
+<div  style="padding-left: 300px;">
+        <input type="button" name="" style="font-size: 16px;border-radius: 15px;background-color: #4CAF50;cursor: pointer;display: inline-block;
+        " id="" value="Submit" onclick="result()">
+        <input type="reset" value="Reset" style="font-size: 16px;background-color: #f44336;border-radius: 15px;cursor: pointer;display: inline-block;"> 
+
+    </div>
+    </form>
+</div>
+
+    <script>
+        function result(){
+            var score=0
+            if(document.getElementById("r1").checked){
+                score++;
+            }
+            if(document.getElementById("r2").checked){
+                score++;
+            }
+            if(document.getElementById("r3").checked){
+                score++;
+            }
+            if(document.getElementById("r4").checked){
+                score++;
+            }
+            if(document.getElementById("r5").checked){
+                score++;
+            }
+            document.write("<h1>Score=",score,"</h1>")
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING & MATH</title>
+</head>
+<body> <h1 style="text-align: center;">String Operations</h1>
+    <div></div>
+    <table align="center" cellpadding="16" cellspacing="4">
+        <tbody>
+        <tr>
+            <th>enter the text:</th>
+            <td><input type="text" id="s"></td>
+        </tr>
+        <tr>
+            <th>slice a text</th>
+            <td><input type="text" name="slice" id="slice"></td>
+        </tr>
+        <tr>
+            <th>sub string:</th>
+            <td><input type="text" name="substring" id="suns"></td>
+        </tr>
+        <tr>
+            <th>replace:</th>
+            <td><input type="text" name="replace"></td>
+        </tr>
+        <tr>
+            <th>length:</th>
+            <td><input type="text" name="length" id="len"></td>
+        </tr>
+        <tr>
+            <th>uppercase</th>
+            <td><input type="text" name="upper" id="upper"></td>
+        </tr>
+        <tr>
+            <th>lowercase</th>
+            <td><input type="text" name="lower" id="lower"></td>
+        </tr>
+        <tr>
+            <th>
+                <input type="button" name="check" value="check" onclick="string()">
+            </th>
+            <hr>
+        </tr>
+    </tbody>
+        
+</table>
+<hr>
+
+</div>
+<div>
+<h1 style="text-align: center;">Math Operations</h1><hr>
+<table align="center" cellpadding="16" cellspacing="4">
+    <tbody>
+        <tr>
+            <th>enter the number:</th>
+            <td><input type="text" name="number" id="num"></td>
+        </tr>
+        <tr>
+            <th>square root:</th>
+            <td><input type="text" name="square" id="res"></td>
+        </tr>
+        <tr>
+            <th><input type="button" name="check" value="check" onclick="math()"></th>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+<script lang="javascript/text">
+    function math(){
+        let a=document.getElementById('num').value
+       let b=Math.sqrt(a)
+        document.getElementById('res').value=b
+
+
+    }
+    function string(){
+        let a=document.getElementById('s').value;
+        b=a.slice(1,4)
+        document.getElementById('slice').value=b
+        let l=a.length
+        document.getElementById('len').value=l
+        u=a.toUpperCase()
+        lo=a.toLowerCase()
+        document.getElementById('upper').value=u
+        document.getElementById('lower').value=lo
+
+        
+    }
+
+
+</script>
+</html>
