@@ -1,0 +1,1 @@
+select distinct rollno,sum(fees) from admission join course where admission.cid=course.cid and rollno=105;
