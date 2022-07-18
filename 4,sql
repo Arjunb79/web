@@ -1,1 +1,2 @@
-select distinct rollno,sum(fees) from admission join course where admission.cid=course.cid and rollno=105;
+4.select distinct rollno,sum(fees) from admission join course where admission.cid=course.cid and rollno=105;
+5.select cid,count(rollno) as number_of_student from admission group by cid;
